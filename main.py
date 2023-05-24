@@ -46,10 +46,14 @@ data_frame_el_espectador = pd.read_excel('el_espectador.xlsx')
 data_frame_el_tiempo = pd.read_excel('eltiempo.xlsx')
 data_frame_semana = pd.read_excel('semana.xlsx')
 
+print("Aplicando formato...")
+
 # fomato
 frame_el_espectador = formato(data_frame_el_espectador)
 frame_el_tiempo = formato(data_frame_el_tiempo)
 frame_semana = formato(data_frame_semana)
+
+print("traduciendo...")
 
 #traducción
 frame_el_espectador_traducido = traduccion(frame_el_espectador)
@@ -65,3 +69,5 @@ df_el_tiempo = pd.DataFrame(frame_el_tiempo_traducido)
 df_el_espectador.to_excel('Output/el_espectador.xlsx', index=False)
 df_semana.to_excel('Output/eltiempo.xlsx', index=False)
 df_el_tiempo.to_excel('Output/semana.xlsx', index=False)
+
+print("Traducción exitosa -> ./Output")
