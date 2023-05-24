@@ -1,8 +1,6 @@
 import re
 import pandas as pd
-from googletrans import Translator
-global translator
-translator = Translator()
+from deep_translator import GoogleTranslator
 
 ## FROMATO Y TRADUCCIÓN
 def formato(frame):
@@ -12,8 +10,8 @@ def formato(frame):
         contenido = frame.iat[indice, 2]
         titulo_l = limpieza(titulo)
         contenido_l = limpieza(contenido)
-        frame.iat[indice, 1] = titulo_l
-        frame.iat[indice, 2] = contenido_l
+        frame.iat[indice, 1] = str(titulo_l)
+        frame.iat[indice, 2] = str(contenido_l)
     return frame
 
 def limpieza(texto):
@@ -36,12 +34,11 @@ def traduccion(frame):
     return frame
 
 def translate(texto):
-    global translator
     try:
-        translation = translator.translate(texto, dest='en')
-        return translation.text
+        result = (GoogleTranslator(source='auto', target='en').translate(texto))
+        return result
     except Exception as e:
-        print(f"Se produjo una excepción en traducción: {e}")
+        print(f"Se produjo una excepción en traducción: supera los 5000 caracteres")
 
 
 # Leer el archivo Excel

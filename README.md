@@ -14,3 +14,6 @@ git clone https://github.com/JoseAponte2001/TraduccionLimpieza
 
 ## Descargar dependencias:
 pip install -r requirements.txt
+
+## Ejecutar el programa
+python main.py
