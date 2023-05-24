@@ -5,7 +5,7 @@
 Se necesita intalar la versión Python 3.10
 
 ## Para clonar el repositorio:
-git clone [https://github.com/JoseAponte2001/ParkUD](https://github.com/JoseAponte2001/ExtraccionNoticias)
+git clone https://github.com/JoseAponte2001/TraduccionLimpieza
 
 ## Descargar dependencias:
 pip install -r requirements.txt
