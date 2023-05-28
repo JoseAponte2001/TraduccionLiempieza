@@ -67,7 +67,7 @@ df_el_tiempo = pd.DataFrame(frame_el_tiempo_traducido)
 
 # Escribir el DataFrame en un archivo de Excel
 df_el_espectador.to_excel('Output/el_espectador.xlsx', index=False)
-df_semana.to_excel('Output/eltiempo.xlsx', index=False)
-df_el_tiempo.to_excel('Output/semana.xlsx', index=False)
+df_semana.to_excel('Output/semana.xlsx', index=False)
+df_el_tiempo.to_excel('Output/eltiempo.xlsx', index=False)
 
 print("Traducción exitosa -> ./Output")
